@@ -5,56 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RULES.TXT</title>
     <style>
-        body { background-color: #0d1117; color: #e6edf3; font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; margin: 0; }
-        .header { width: 100%; max-width: 900px; background: #161b22; padding: 30px; border-radius: 8px 8px 0 0; border: 1px solid #30363d; box-sizing: border-box; }
-        h1 { margin: 0; font-size: 42px; letter-spacing: 3px; font-weight: 900; }
-        .buttons { margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap; }
-        .btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 12px 24px; cursor: pointer; font-size: 14px; text-transform: uppercase; font-weight: 800; border-radius: 4px; }
-        .btn-copy { background: #f0883e; color: black; border: none; }
+        body { background-color: #0d1117; color: #e6edf3; font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; margin: 0; }
         
-        /* Блок с текстом */
+        .header { width: 100%; max-width: 1000px; background: #161b22; padding: 35px; border-radius: 12px 12px 0 0; border: 1px solid #30363d; box-sizing: border-box; }
+        h1 { margin: 0; font-size: 48px; letter-spacing: 4px; font-weight: 900; color: #ffffff; }
+        
+        .buttons { margin-top: 30px; display: flex; gap: 20px; flex-wrap: wrap; }
+        .btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 15px 30px; cursor: pointer; font-size: 16px; text-transform: uppercase; font-weight: 900; border-radius: 6px; }
+        .btn-copy { background: #f0883e; color: black; border: none; transition: 0.2s; }
+        .btn-copy:hover { background: #ff9b54; transform: scale(1.05); }
+        
         .content-box { 
             width: 100%; 
-            max-width: 900px; 
+            max-width: 1000px; 
             background: #0d1117; 
-            padding: 50px; 
-            border-radius: 0 0 8px 8px; 
+            padding: 60px; 
+            border-radius: 0 0 12px 12px; 
             border: 1px solid #30363d; 
             border-top: none; 
-            line-height: 2.0; /* Увеличил расстояние между строками */
-            white-space: pre-wrap; 
-            font-weight: 800; 
-            font-size: 18px; /* Увеличил шрифт */
             box-sizing: border-box; 
         }
 
-        /* Стиль для каждого пункта правил */
-        .rule-item {
-            margin-bottom: 25px; /* Дистанция между пунктами 1, 2, 3... */
-            display: block;
+        #rules {
+            line-height: 1.8; 
+            white-space: pre-wrap; 
+            font-weight: 900; 
+            font-size: 22px; 
         }
 
-        a { color: #58a6ff; text-decoration: none; font-weight: 900; border-bottom: 1px solid transparent; }
-        a:hover { border-bottom: 1px solid #58a6ff; }
-        .warning { color: #f85149; font-weight: 900; margin-bottom: 30px; text-transform: uppercase; font-size: 20px; }
-        .highlight { color: #d29922; text-transform: uppercase; }
+        .rule-item {
+            display: block;
+            margin-bottom: 45px; 
+            border-left: 4px solid #30363d; 
+            padding-left: 20px;
+        }
+
+        a { color: #58a6ff; text-decoration: underline; font-weight: 900; }
+        .warning { color: #f85149; font-weight: 900; margin-bottom: 50px; text-transform: uppercase; font-size: 26px; text-align: center; border: 2px dashed #f85149; padding: 20px; }
+        .highlight { color: #d29922; text-transform: uppercase; text-decoration: underline; }
+        .footer { margin-top: 40px; color: #8b949e; font-size: 18px; border-top: 1px solid #30363d; padding-top: 20px; }
     </style>
 </head>
 <body>
     <div class="header">
-        <div style="font-size: 11px; color: #8b949e; margin-bottom: 5px; font-weight: 600;">TEXT PREVIEW</div>
+        <div style="font-size: 12px; color: #8b949e; margin-bottom: 10px; font-weight: 600; letter-spacing: 1px;">TEXT PREVIEW</div>
         <h1>RULES.TXT</h1>
-        <div style="font-size: 13px; color: #8b949e; margin-top: 5px;">Uploaded by @alfanik</div>
+        <div style="font-size: 14px; color: #8b949e; margin-top: 10px;">Uploaded by @alfanik</div>
         <div class="buttons">
             <button class="btn btn-copy" onclick="copyText()">COPY FULL TEXT</button>
             <button class="btn" onclick="window.open(window.location.href, '_blank')">OPEN RAW</button>
         </div>
     </div>
     
-    <div class="content-box" id="rules"><div class="warning">⚠️ ПРАВИЛА ТВИЧА — ОБЯЗАТЕЛЬНО К ПРОЧТЕНИЮ ⚠️</div>
+    <div class="content-box">
+        <div id="rules">
+<div class="warning">⚠️ ПРАВИЛА ТВИЧА — ОБЯЗАТЕЛЬНО К ПРОЧТЕНИЮ ⚠️</div>
 Модераторы имеют полное право удалить любое ваше сообщение, не объясняя причин. Стример имеет право забанить любого по своему усмотрению.
 
-<span class="rule-item">1. <span class="highlight">СПАМ ЗАПРЕЩЕН.</span> Не засоряйте чат (особенно касается Son Ki-hun).</span>
+<span class="rule-item">1. <span class="highlight">ЗАПРЕТКИ.</span> ОБЯЗАТЕЛЬНО К ПРОЧТЕНИЮ ЗАПРЕЩЕННЫЕ СЛОВА НА ПЛАТФОРМЕ <a href="zapretki.png" target="_blank">TWITCH</a>.</span>
 <span class="rule-item">2. <span class="highlight">МОДЕРКИ И VIP.</span> Запрещено выпрашивать статусы. VIP — 5000р.</span>
 <span class="rule-item">3. <span class="highlight">ТОКСИЧНОСТЬ.</span> Чрезмерный негатив карается баном.</span>
 <span class="rule-item">4. <span class="highlight">ЯЗЫК.</span> Приоритет — русский язык.</span>
@@ -63,11 +71,12 @@
 <span class="rule-item">7. <span class="highlight">МЕМЫ.</span> Меньше «67» и «42» (без негатива).</span>
 <span class="rule-item">8. <span class="highlight">ССЫЛКИ.</span> Секс-контент и ссылки на Kick запрещены.</span>
 <span class="rule-item">9. <span class="highlight">СМАЙЛИКИ.</span> Установите расширение <a href="https://chromewebstore.google.com/detail/7tv/ammjkodgmmoknidbanneddgankgfejfh" target="_blank">7tv</a>.</span>
-<span class="rule-item">10. <span class="highlight">СОЦСЕТИ.</span> Подпишись на <a href="https://t.me/Dell11q" target="_blank">Telegram</a> Делла.</span>
-<span class="rule-item">11. <span class="highlight">ЗАПРЕТКИ.</span> ОБЯЗАТЕЛЬНО К ПРОЧТЕНИЮ ЗАПРЕЩЕННЫЕ СЛОВА НА ПЛАТФОРМЕ <a href="zapretki.png" target="_blank">TWITCH</a>.</span>
+<span class="rule-item">10. <span class="highlight">СОЦСЕТИ.</span> Подпишись на <a href="https://t.me/Dell11q" target="_blank">Telegram</a> канал Делла.</span>
+<span class="rule-item">11. <span class="highlight">СПАМ ЗАПРЕЩЕН.</span> Не засоряйте чат (особенно касается Son Ki-hun).</span>
 
----
-Соблюдайте правила и приятного просмотра!</div>
+<div class="footer">Соблюдайте правила и приятного просмотра!</div>
+        </div>
+    </div>
 
     <script>
         function copyText() {
