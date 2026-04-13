@@ -2,107 +2,53 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RULES.TXT</title>
     <style>
-        body {
-            background-color: #0d1117; 
-            color: #e6edf3; 
-            font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px;
-            margin: 0;
-        }
-        .header {
-            width: 100%;
-            max-width: 900px;
-            background: #161b22;
-            padding: 25px;
-            border-radius: 8px 8px 0 0;
-            border: 1px solid #30363d;
-        }
-        h1 { margin: 0; font-size: 36px; letter-spacing: 3px; font-weight: 900; }
-        .buttons { margin-top: 20px; display: flex; gap: 12px; }
-        .btn {
-            background: #21262d;
-            border: 1px solid #30363d;
-            color: #c9d1d9;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 13px;
-            text-transform: uppercase;
-            font-weight: 800;
-            border-radius: 4px;
-        }
-        .btn:hover { background: #30363d; }
+        body { background-color: #0d1117; color: #e6edf3; font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
+        .header { width: 100%; max-width: 900px; background: #161b22; padding: 25px; border-radius: 8px 8px 0 0; border: 1px solid #30363d; box-sizing: border-box; }
+        h1 { margin: 0; font-size: clamp(24px, 5vw, 36px); letter-spacing: 3px; font-weight: 900; }
+        .buttons { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 10px 20px; cursor: pointer; font-size: 13px; text-transform: uppercase; font-weight: 800; border-radius: 4px; }
         .btn-copy { background: #f0883e; color: black; border: none; }
-        
-        .content-box {
-            width: 100%;
-            max-width: 900px;
-            background: #0d1117;
-            padding: 40px;
-            border-radius: 0 0 8px 8px;
-            border: 1px solid #30363d;
-            border-top: none;
-            line-height: 1.7;
-            white-space: pre-wrap;
-            font-weight: 800; /* Максимальная жирность */
-            font-size: 16px;
-        }
-        a { color: #58a6ff; text-decoration: none; border-bottom: 1px solid transparent; font-weight: 900; }
-        a:hover { border-bottom: 1px solid #58a6ff; }
+        .content-box { width: 100%; max-width: 900px; background: #0d1117; padding: clamp(20px, 5vw, 40px); border-radius: 0 0 8px 8px; border: 1px solid #30363d; border-top: none; line-height: 1.7; white-space: pre-wrap; font-weight: 800; font-size: 16px; box-sizing: border-box; }
+        a { color: #58a6ff; text-decoration: none; font-weight: 900; }
         .warning { color: #f85149; font-weight: 900; margin-bottom: 20px; text-transform: uppercase; }
         .highlight { color: #d29922; }
     </style>
 </head>
 <body>
-
     <div class="header">
         <div style="font-size: 11px; color: #8b949e; margin-bottom: 5px; font-weight: 600;">TEXT PREVIEW</div>
         <h1>RULES.TXT</h1>
         <div style="font-size: 13px; color: #8b949e; margin-top: 5px;">Uploaded by @alfanik</div>
-        
         <div class="buttons">
             <button class="btn btn-copy" onclick="copyText()">COPY FULL TEXT</button>
-            <button class="btn" onclick="window.open(location.href, '_blank')">OPEN RAW</button>
+            <button class="btn" onclick="window.open(window.location.href, '_blank')">OPEN RAW</button>
         </div>
     </div>
-
     <div class="content-box" id="rules"><div class="warning">⚠️ ПРАВИЛА ТВИЧА — ОБЯЗАТЕЛЬНО К ПРОЧТЕНИЮ ⚠️</div>
 Модераторы имеют полное право удалить любое ваше сообщение, не объясняя причин. Стример имеет право отстранить или забанить любого пользователя по своему усмотрению.
 
-1. <span class="highlight">СПАМ ЗАПРЕЩЕН.</span> Не засоряйте чат однотипными сообщениями (особенно касается Son Ki-hun).
-
-2. <span class="highlight">МОДЕРКИ И VIP.</span> Запрещено выпрашивать статусы. <span class="highlight">VIP</span> стоит 5000 рублей одним донатом напрямую стримеру.
-
-3. <span class="highlight">ТОКСИЧНОСТЬ.</span> Чрезмерное негативное отношение к людям карается баном.
-
-4. <span class="highlight">ЯЗЫК.</span> В чате принимается только русский язык (английский допустим).
-
-5. <span class="highlight">СПОЙЛЕРЫ КАТЕГОРИЧЕСКИ ЗАПРЕЩЕНЫ.</span>
-
-6. <span class="highlight">КОНФИДЕНЦИАЛЬНОСТЬ.</span> Запрещено публиковать в чат личные данные и банковские карты.
-
-7. <span class="highlight">МЕМЫ.</span> Поменьше «67» и «42» в чате (без негатива).
-
-8. <span class="highlight">ССЫЛКИ И ПЛАТФОРМЫ.</span> Ссылки на сексуальный контент и платформу Kick запрещены.
-
-9. <span class="highlight">СМАЙЛИКИ.</span> Желательно установите расширение <a href="https://chromewebstore.google.com/detail/7tv/ammjkodgmmoknidbanneddgankgfejfh" target="_blank">7tv</a>.
-
-10. <span class="highlight">СОЦСЕТИ.</span> Обязательно быть подписанным на <a href="https://t.me/Dell11q" target="_blank">Telegram</a> канал Делла.
-
+1. <span class="highlight">СПАМ ЗАПРЕЩЕН.</span> Не засоряйте чат (особенно касается Son Ki-hun).
+2. <span class="highlight">МОДЕРКИ И VIP.</span> Запрещено выпрашивать статусы. VIP — 5000р.
+3. <span class="highlight">ТОКСИЧНОСТЬ.</span> Чрезмерный негатив карается баном.
+4. <span class="highlight">ЯЗЫК.</span> Приоритет — русский язык.
+5. <span class="highlight">СПОЙЛЕРЫ.</span> КАТЕГОРИЧЕСКИ ЗАПРЕЩЕНЫ.
+6. <span class="highlight">ЛИЧНЫЕ ДАННЫЕ.</span> Не пишите адреса и номера карт.
+7. <span class="highlight">МЕМЫ.</span> Меньше «67» и «42» (без негатива).
+8. <span class="highlight">ССЫЛКИ.</span> Секс-контент и ссылки на Kick запрещены.
+9. <span class="highlight">СМАЙЛИКИ.</span> Установите расширение <a href="https://chromewebstore.google.com/detail/7tv/ammjkodgmmoknidbanneddgankgfejfh" target="_blank">7tv</a>.
+10. <span class="highlight">СОЦСЕТИ.</span> Подпишись на <a href="https://t.me/Dell11q" target="_blank">Telegram</a> Делла.
 11. <span class="highlight">ЗАПРЕТКИ.</span> ОБЯЗАТЕЛЬНО К ПРОЧТЕНИЮ ЗАПРЕЩЕННЫЕ СЛОВА НА ПЛАТФОРМЕ <a href="zapretki.png" target="_blank">TWITCH</a>.
 
 ---
 Соблюдайте правила и приятного просмотра!</div>
-
     <script>
         function copyText() {
             const text = document.getElementById('rules').innerText;
             navigator.clipboard.writeText(text);
-            alert('Текст правил скопирован!');
+            alert('Правила скопированы!');
         }
     </script>
 </body>
